@@ -14,7 +14,7 @@ file = open("TokenVieuxM.txt", "r")
 lines = file.readlines()
 file.close()
 
-stwrds = stopwords.words()
+stwrds = set(stopwords.words())
 # print(stwrds)
 
 for line in lines:
