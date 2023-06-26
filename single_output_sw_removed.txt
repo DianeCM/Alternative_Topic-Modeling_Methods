@@ -1,0 +1,110 @@
+Topic  0
+auditory  - P= 0.015680522
+dna  - P= 0.014265417
+neurons  - P= 0.0138127
+proteomics  - P= 0.012180993
+protein  - P= 0.011762063
+damages  - P= 0.00991133
+proteins  - P= 0.0087914355
+modifications  - P= 0.008395551
+abstract  - P= 0.007832056
+possible  - P= 0.0074230507
+
+Topic  1
+auditory  - P= 0.013524554
+neurons  - P= 0.009564074
+proteomics  - P= 0.008881034
+protein  - P= 0.008760762
+possible  - P= 0.007192681
+proteins  - P= 0.0070569087
+dna  - P= 0.006949833
+structural  - P= 0.006781386
+input  - P= 0.006550612
+part  - P= 0.0061188582
+
+Topic  2
+proteomics  - P= 0.007834321
+modifications  - P= 0.007262903
+dna  - P= 0.007259068
+protein  - P= 0.00660996
+damages  - P= 0.0058508106
+proteins  - P= 0.005387098
+possible  - P= 0.0053708684
+expression  - P= 0.004839372
+molecular  - P= 0.004657107
+direct  - P= 0.0045120236
+
+Topic  3
+biological  - P= 0.021111839
+measures  - P= 0.017922001
+physical  - P= 0.016346434
+mental  - P= 0.015437127
+functioning  - P= 0.012490687
+taiwanese  - P= 0.012396157
+elderly  - P= 0.012384931
+middleaged  - P= 0.012120505
+health  - P= 0.011680513
+information  - P= 0.010992383
+
+Topic  4
+months  - P= 0.017219594
+ice  - P= 0.016786337
+dna  - P= 0.0156772
+mice  - P= 0.011991492
+aβ  - P= 0.011765587
+increases  - P= 0.011692091
+age  - P= 0.011683623
+neuronal  - P= 0.011664144
+kda  - P= 0.011661594
+alzheimer’s  - P= 0.011648323
+
+Topic  5
+structural  - P= 0.017210804
+strategies  - P= 0.015225224
+husbands  - P= 0.015120684
+work  - P= 0.014858169
+experiences  - P= 0.011945823
+tie  - P= 0.009394053
+gender  - P= 0.008967067
+problems  - P= 0.008416892
+gendered  - P= 0.008231073
+approach  - P= 0.008165932
+
+Topic  6
+auditory  - P= 0.028081216
+neurons  - P= 0.020487025
+individual  - P= 0.009649134
+cord  - P= 0.009550635
+spinal  - P= 0.009097336
+projection  - P= 0.0090792
+nucleus  - P= 0.008935092
+patterns  - P= 0.00869776
+axons  - P= 0.008565723
+targets  - P= 0.008551949
+
+Topic  7
+biological  - P= 0.02142546
+physical  - P= 0.017580036
+mental  - P= 0.01744918
+measures  - P= 0.014557309
+profiles  - P= 0.013179856
+data  - P= 0.013138333
+sample  - P= 0.013049865
+information  - P= 0.012419173
+stressful  - P= 0.011619578
+health  - P= 0.0113381995
+
+Topic  8
+strategies  - P= 0.020974759
+structural  - P= 0.019326072
+husbands  - P= 0.015231941
+experiences  - P= 0.013009048
+work  - P= 0.011314225
+caregiving  - P= 0.010163718
+gendered  - P= 0.009924067
+approaches  - P= 0.009624176
+approach  - P= 0.009214489
+auditory  - P= 0.009006451
+
+Perplexity=  -7.6236865533383815
+Coherence=  0.8066655047975377
