@@ -1,12 +1,70 @@
 # Alternative_Topic-Modeling_Methods
 
+
+
+### Brief Introduction ###
+**Topic modeling** is a machine learning and natural language processing technique for determining the topics present in a document. It’s capable of determining the probability of a word or phrase belonging to a certain topic and cluster documents based on their similarity or closeness. It does this by analyzing the frequency of words and phrases in the documents.
+
+Specifically, the current methods for extraction of topic models include Latent Dirichlet Allocation (LDA), Latent Semantic Analysis (LSA), Probabilistic Latent Semantic Analysis (PLSA), and Non-Negative Matrix Factorization (NMF).
+
+**Latent Dirichlet Allocation (LDA)**
+
+Latent Dirichlet Allocation is an unsupervised, machine learning, clustering technique that we commonly use for text analysis. It’s a type of topic modeling in which words are represented as topics, and documents are represented as a collection of these word topics.
+
+In summary, this method recognizes topics in the documents through several steps:
+
+* Sampling topics – initialize the Dirichlet distribution of documents in the topic’s space and choose N topics from multinomial distribution of topics over a document.
+* Sampling words and creating a document – initialize the Dirichlet distribution of topics in the word’s space and choose N words, for each of the previously sampled topics, from the multinomial distribution of words over topics.
+* Maximize the probability of creating the same documents.
+
+**Perplexity Score**
+
+There are a number of ways that can be used to analyze the performance of topic models. Most important,of which is perplexity, which is also used to find the number of topics by showing the generalization power of model on unseen data. It does not require a priori categorization, and was originally used in language modeling. It is used to estimate a model on a subset of a corpus and then the estimated model is used for prediction on an unseen or held out dataset.
+
+**Coherence Score**
+
+Coherence measures how “fitting” all top words are to a topic. The top words are the most frequently appearing words in a given topic, where frequency is calculated differently depending on the topic model. How “fitting” top words are together refer to how well they correlate with human judgment. A coherent topic could contain “brother, father, sister” because they cohere to family. An incoherent topic could contain “pizza, book, submarine” because their connection is unclear. Different coherent measures calculate these scores differently.
+
+We can use the coherence score in topic modeling to measure how interpretable the topics are to humans. In this case, topics are represented as the top N words with the highest probability of belonging to that particular topic. Briefly, the coherence score measures how similar these words are to each other
+
 ---
 
 ## 1
 
-- a)  
+- a) Evaluating coherence and perplexity values
 
-- b)  
+The `CoherenceTestIwor.py` program train the LDA model on the `TokenVieuxM.txt` dataset. After launch the program several times some observations can be made :
+
+* The **perplexity** value ranges between **-6.99** and **-7.65**.
+* The **coherence** value ranges between **0.32** and **0.45**. 
+
+The interpretation of what is considered a good or bad coherence value depends on the specific coherence measure used. In this case the **c_v coherence** measure is used, wich typically ranges between 0 and 1, with higher values indicating better coherence.
+
+This metrics creates content vectors of words using their co-occurrences and, after that, calculates the score using normalized pointwise mutual information (NPMI) and the cosine similarity. This metric is popular because it’s the default metric in the Gensim topic coherence pipeline module, but it has some issues. [Even the author of this metric doesn’t recommend using it](https://github.com/dice-group/Palmetto/issues/13#issuecomment-371553052).
+
+In general, coherence values above 0.4 are considered good, while values above 0.6 are considered very good. Values below 0.3 are considered poor, indicating that the topics are not coherent and may not be useful for interpretation or downstream applications.
+
+When evaluating the coherence of a set of topics, it's important to take into account the size of the dataset, the number of topics, and the quality of the text data.
+
+In the case of healthcare research paper abstracts, the coherence values of 0.3 and 0.4 for a 10-topic LDA model are reasonable, but not very high. It's possible that the abstracts are complex and difficult to model, or that the topics are too broad or overlapping.
+
+Regarding perplexity values we can say that values between -6.99 and -7.65 for a 10-topic LDA model may suggest that the model is performing reasonably well. Lower values of perplexity indicate better generalization power of the model on the words of test documents by the trained topics. However, perplexity is not always a perfect indicator of model quality. A model with low perplexity may not necessarily produce coherent topics that are useful for downstream applications. Additionally, perplexity values are often dependent on the size of the dataset and the complexity of the text data. 
+
+**Choosing the Best Coherence and Perplexity Scores**
+
+In order to obtain the best results regarding coherence and perplexity it may be helpful to experiment with different preprocessing techniques, such as stemming or stopword removal, or to adjust the hyperparameters of the LDA model, such as the number of topics or the alpha and beta hyperparameters.
+
+Usually, the coherence score will increase with the increase in the number of topics. This increase will become smaller as the number of topics gets higher. The trade-off between the number of topics and coherence score can be achieved using the so-called **elbow technique**. The method implies plotting coherence score as a function of the number of topics. We use the elbow of the curve to select the number of topics.
+The idea behind this method is that we want to choose a point after which the diminishing increase of coherence score is no longer worth the additional increase of the number of topics
+Also, the coherence score depends on the LDA hyperparameters, such as $\alpha$, $\beta$, and $K$. Because of that, we can use any machine learning hyperparameter tuning technique. After all, it’s important to manually validate results because, in general, the validation of unsupervised machine learning systems is always a tricky task.
+
+Generally, increasing the number of topics will improve the coherence but worsen the perplexity, so we need to find a balance that fits your needs and preferences. 
+
+- b)Evaluating an specific launch
+
+One of the program outputs obtained is presented in the file `single_output.txt`. In this case just one or two words per topic are related to research on healthcare. Most of the words are stopwords and we can observe that they are repeated in the majority of the topics. In general, there seem to be some topics that could be relevant to healthcare, but there are also topics that appear less distinctive and more generic.
+
+Although the obtained perplexity value (-7.179193910071468) is low and the coherence value is above 0.3, the results are not good, since the words at the top of the topics are not representative of the general topic discussed in the documents.
 
 ----
 
