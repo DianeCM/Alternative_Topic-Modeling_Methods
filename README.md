@@ -114,3 +114,20 @@ We can use the coherence score in topic modeling to measure how interpretable th
 ----
 
 ## 3
+As a result of taking into account the proportion of topics in documents, in one of the program's runs it was found that out of a total of 8 topics:
+
+### Typical Document for each topic, topic proportion (or probability) in documents 
+Topic 0: Document 0 with prob: 0.9937055706977844
+
+Topic 5: Document 1 with prob: 0.9942291975021362
+
+Topic 1: Document 2 with prob: 0.9933327436447144
+
+Topic 3: Document 3 with prob: 0.7552105784416199   
+
+Topic 4: Document 3 with prob: 0.2414269596338272
+
+Topic 8: Document 4 with prob: 0.9957541227340698
+
+### Typical Document for each topic, measuring cosine similarity
+In the case of measuring cosine similarity, it found that the cosine similarity was 1 for each document with all topics. Therefore, any document can be chosen to represent any of the topics.
