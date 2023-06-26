@@ -58,7 +58,7 @@ We can use the coherence score in topic modeling to measure how interpretable th
   The idea behind this method is that we want to choose a point after which the diminishing increase of coherence score is no longer worth the additional increase of the number of topics
   Also, the coherence score depends on the LDA hyperparameters, such as $\alpha$, $\beta$, and $K$. Because of that, we can use any machine learning hyperparameter tuning technique. After all, it’s important to manually validate results because, in general, the validation of unsupervised machine learning systems is always a tricky task.
 
-  Generally, increasing the number of topics will improve the coherence but worsen the perplexity, so we need to find a balance that fits your needs and preferences. 
+  Generally, increasing the number of topics will improve the coherence but worsen the perplexity, so we need to find a balance that fits our needs and preferences. 
 
 - b) Evaluating an specific launch
 
