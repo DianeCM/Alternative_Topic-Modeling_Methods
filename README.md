@@ -99,15 +99,15 @@ We can use the coherence score in topic modeling to measure how interpretable th
 
   Better results are obtained than in the evaluation of question 1b), which indicates that the extraction of stopwords was a substantial improvement to the model.
 
-- d) Se puede observar que al ejecutar el programa varias veces para `TokenVieuxM.txt` desde 5 hasta 20 temas esperados, obtenemos datos como:
+- d) It can be observed that when running the program several times for `TokenVieuxM.txt` with expected topics ranging from 5 to 20, we obtain data such as:
   
   ![Image](./coherence_values_per_nb_m_image.png)
 
-  Podemos percatarnos que la coherencia esta en su mayor valor para la cantidad de temas esperados igual a 18 y la perplexity está en su valor mas bajo que es generalmente lo buscado. Por lo que podemos conluir que dentro del rango buscado, la mejor cantidad de temas esperados es 18.
+  We can notice that coherence is at its highest value for the expected topic count of 18, and perplexity is at its lowest value which is generally what is sought. Therefore, we can conclude that within the searched range, the best expected topic count is 18.
   
-- e) Se puede observar que al ejecutar el programa usando `TokenVieuxN.txt` para 10 temas esperados, sin remover las _stopwords_ tenemos una coherencia aproximada de `0.3144` mientras que para removiendo las _stopwords_ obtenemos una coherencia de `0.5781` aproximadamente, lo que indica que eliminar las _stopwords_ siempre mejora la coherencia del modelo.
+- e) It can be observed that when running the program using `TokenVieuxN.txt` for an expected topic count of 10, without removing the stopwords, we obtain an approximate coherence of `0.3144`, whereas by removing the stopwords we obtain a coherence of approximately `0.5781`, indicating that removing the stopwords always improves the coherence of the model.
 
-- f) A pesar de que también tiende a crecer la coherencia de acuerdo a la cantidad de temas esperados, se puede observar que varía diferente en `TokenVieuxN.txt`, por lo que se puede concluir que la cantidad de temas óptimos es en función a los datos.
+- f) Although coherence also tends to increase according to the expected topic count, it can be observed that it varies differently in `TokenVieuxN.txt`, so it can be concluded that the optimal number of topics depends on the data.
 
   ![Image](./coherence_values_per_nb_n_image.png)
 
