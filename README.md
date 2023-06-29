@@ -114,6 +114,8 @@ We can use the coherence score in topic modeling to measure how interpretable th
 ----
 
 ## 3
+### TokenVieuxM.txt
+
 As a result of taking into account the proportion of topics in documents, in one of the program's runs it was found that out of a total of 8 topics:
 
 ### Typical Document for each topic, topic proportion (or probability) in documents 
@@ -131,3 +133,26 @@ Topic 8: Document 4 with prob: 0.9957541227340698
 
 ### Typical Document for each topic, measuring cosine similarity
 In the case of measuring cosine similarity, it found that the cosine similarity was 1 for each document with all topics. Therefore, any document can be chosen to represent any of the topics.
+
+### TokenVieuxN.txt
+
+As a result of taking into account the proportion of topics in documents, in one of the program's runs it was found that out of a total of 9 topics:
+
+### Typical Document for each topic, topic proportion (or probability) in documents 
+
+Topic 5: 1 :  
+with prob: 0.994229793548584
+
+Topic 2: 3 :  
+with prob: 0.9962176084518433
+
+Topic 8: 5 :  
+with prob: 0.9965642094612122
+
+Topic 7: 6 :  
+with prob: 0.9959448575973511
+
+Topic 9: 8 :  
+with prob: 0.9937487244606018
+
+### In the case of measuring cosine similarity, it was found that for each document the cosine similarity was 1 with all topics. Therefore, any document can be chosen to represent any of the topics.
